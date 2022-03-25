@@ -1,7 +1,6 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
-import WordIndex from './components/WordIndex';
 import Home from './components/Home';
 
 function App() {

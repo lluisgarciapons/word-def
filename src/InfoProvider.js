@@ -11,8 +11,9 @@ export const InfoProvider = ({ children }) => {
 
 
     useEffect(() => {
+        console.log(process.env);
         axios.get(`https://lingua-robot.p.rapidapi.com/language/v1/entries/en/${word}`, {
-            headers: { 'X-RapidAPI-Key': '9c82489347msh05e2b7e1ce9e053p1ed74bjsn6f910f0b85b6' }
+            headers: { 'X-RapidAPI-Key': process.env.REACT_APP_API_KEY }
         })
             .then(({ data }) => {
                 console.log(data);
