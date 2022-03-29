@@ -4,11 +4,11 @@ import { WordState } from "../WordContext";
 function SearchBar() {
     const [selectedWord, setSelectedWord] = useState("");
 
-    const { setWord } = useContext(WordState);
+    const context = useContext(WordState);
     return (
         <div className="search-div">
             <input type="text" value={selectedWord} onChange={(e) => setSelectedWord(e.target.value)} />
-            <button onClick={() => setWord(selectedWord)}>SEND</button>
+            <button onClick={() => context.setWord(selectedWord)}>SEND</button>
         </div>
     );
 }
