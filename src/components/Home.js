@@ -4,10 +4,10 @@ import { WordState } from "../WordContext";
 import WordIndex from "./WordIndex";
 
 function Home() {
-    const { word } = useContext(WordState);
+    const context = useContext(WordState);
     return (
         <div>
-            {!word ? <h3>Write a word to start</h3> : <InfoProvider><WordIndex /></InfoProvider>}
+            {!context?.word ? <h3>Write a word to start</h3> : <InfoProvider><WordIndex /></InfoProvider>}
         </div>
     );
 }
